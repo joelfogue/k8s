@@ -17,7 +17,7 @@ metadata:
   labels: {}
 type: Opaque
 data:
-  api-key: PUT_YOUR_BASE64_ENCODED_API_KEY_HERE
+  api-key: MjQ1ZmY3MmQyYzZkZDUzMjE3NTdmNjRlZWEwNDBkYjcK
 ---
 # Source: datadog/templates/secret-cluster-agent-token.yaml
 apiVersion: v1
