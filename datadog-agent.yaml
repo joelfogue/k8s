@@ -502,6 +502,8 @@ spec:
               value: "5555"
             - name: DD_EXTRA_CONFIG_PROVIDERS
               value: "clusterchecks endpointschecks"
+            - name: DD_SITE
+              value: "datadoghq.com"
           volumeMounts:
             - name: installinfo
               subPath: install_info
@@ -596,6 +598,8 @@ spec:
               value: "true"
             - name: DD_APM_RECEIVER_PORT
               value: "8126"
+            - name: DD_SITE
+              value: "datadoghq.com"
           volumeMounts:
             - name: config
               mountPath: /etc/datadog-agent
@@ -655,6 +659,8 @@ spec:
                 configMapKeyRef:
                   name: datadog-cluster-id
                   key: id
+            - name: DD_SITE
+              value: "datadoghq.com"
           volumeMounts:
             - name: config
               mountPath: /etc/datadog-agent
@@ -713,6 +719,8 @@ spec:
               value: unix:///host/var/run/docker.sock
             - name: DD_LOG_LEVEL
               value: "INFO"
+            - name: DD_SITE
+              value: "datadoghq.com"
           resources: {}
           volumeMounts:
             - name: tmpdir
@@ -779,6 +787,8 @@ spec:
               value: /var/run/sysprobe/runtime-security.sock
             - name: DD_RUNTIME_SECURITY_CONFIG_SYSCALL_MONITOR_ENABLED
               value: "false"
+            - name: DD_SITE
+              value: "datadoghq.com"
           volumeMounts:
             - name: config
               mountPath: /etc/datadog-agent
@@ -857,6 +867,8 @@ spec:
               value: "yes"
             - name: DOCKER_HOST
               value: unix:///host/var/run/docker.sock
+            - name: DD_SITE
+              value: "datadoghq.com"
           resources: {}
         - name: seccomp-setup
           image: "gcr.io/datadoghq/agent:7.26.0"
@@ -1016,6 +1028,8 @@ spec:
               value: "true"
             - name: DD_COMPLIANCE_CONFIG_CHECK_INTERVAL
               value: "20m"
+            - name: DD_SITE
+              value: "datadoghq.com"
           livenessProbe:
             failureThreshold: 6
             httpGet:
