@@ -27,7 +27,7 @@ metadata:
   labels: {}
 type: Opaque
 data:
-  token: PUT_A_BASE64_ENCODED_RANDOM_STRING_HERE
+  token: UFVUX0FfQkFTRTY0X0VOQ09ERURfUkFORE9NX1NUUklOR19IRVJFCg==
 ---
 # Source: datadog/templates/install_info-configmap.yaml
 apiVersion: v1
